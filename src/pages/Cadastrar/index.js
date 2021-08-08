@@ -2,6 +2,13 @@ import React from 'react';
 import {Menu} from '../../componentes/Menu';
 
 export const Cadastrar = () => {
+
+    const [produto, setProduto] = useState({
+        nome: '',
+        valor: '',
+        Quantidade: ''
+    })
+
     return(
         <>
         <Menu />
