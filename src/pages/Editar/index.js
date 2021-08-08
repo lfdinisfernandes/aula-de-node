@@ -1,11 +1,11 @@
 import React from 'react';
 import {Menu} from '../../componentes/Menu';
 
-export const Visualizar = () => {
+export const Editar = () => {
     return(
         <>
             <Menu />
-            <h1>Visualizar</h1>
+            <h1>Editar</h1>
         </>
     )
 };
