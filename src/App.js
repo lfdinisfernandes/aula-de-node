@@ -1,6 +1,5 @@
 import React  from "react";
 import { BrowserRouter as Router, Switch, Route} from 'react-router-dom';
-//import { cadastrar } from "./pages/cadastrar";
 
 import {Dashboard} from './pages/dashboard';
 import {Listar} from './pages/liste';
@@ -16,7 +15,7 @@ function App() {
         <Switch>
           <Route exact path="/" component= {Dashboard}/> 
           <Route exact path="/listar" component= {Listar}/>
-          <Route exact path="/Visualizar" component= {Visualizar}/>
+          <Route exact path="/Visualizar/:id" component= {Visualizar}/>
           <Route exact path="/Cadastrar" component= {Cadastrar}/>
           <Route exact path="/editar" component= {Editar}/>
         </Switch>

@@ -1,5 +1,8 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import {Menu} from '../../componentes/Menu';
+
+
 export const Listar = () => {
 
     const [data, setData] = useState([]);
@@ -36,6 +39,10 @@ export const Listar = () => {
             <Menu />
             <h1>Listar</h1>
 
+            <Link to="/Cadastrar"><button type="button">Cadastrar</button></Link>
+            
+            <hr />
+
             <table>
                 <thead>
                     <tr>
@@ -53,7 +60,10 @@ export const Listar = () => {
                         <td>{produto.nome}</td>
                         <td>{produto.valor}</td>
                         <td>{produto.quantidade}</td>
-                        <td>Visualizar Editar Apagar</td>
+                        <td>
+                            <Link to={"/visualizar/" + produto.id}><button
+                             type="button">Visualizar</button></Link>{" "}
+                             Editar Apagar</td>
                         </tr>
                     ))}
                 </tbody>
