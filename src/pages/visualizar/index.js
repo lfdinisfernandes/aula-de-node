@@ -7,8 +7,10 @@ export const Visualizar = (props) => {
    console.log(id)
    const [data, setData] = useState("");
    
+   
 
    useEffect(() => {
+
         const getProduto = async () =>{
             setData({
                 id: 1,
@@ -19,7 +21,7 @@ export const Visualizar = (props) => {
         }
 
         getProduto();
-    },[id])
+    },[id]);
     
     return(
         <>

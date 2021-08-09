@@ -1,9 +1,16 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import {Menu} from '../../componentes/Menu';
 
 
 export const Listar = () => {
+
+    const { state } = useLocation();
+
+    const [status] = useState({
+        type: state ? state.type : "" ,
+        mensagem:  state ? state.mensagem : ""
+    })
 
     const [data, setData] = useState([]);
 
@@ -31,13 +38,21 @@ export const Listar = () => {
         setData(valores);
     }
 
-    useEffect(() =>{
+    useEffect(() => {
         listarProdutos();
     },[]);
+
+    const apagarProduto = async (idProduto) => {
+        console.log(idProduto);
+    }
+
+
     return(
         <>
             <Menu />
             <h1>Listar</h1>
+
+            {status.type === "success" ? <p style={{color: "green"}}>{status.mensagem}</p> : ""}
 
             <Link to="/Cadastrar"><button type="button">Cadastrar</button></Link>
             
@@ -61,9 +76,12 @@ export const Listar = () => {
                         <td>{produto.valor}</td>
                         <td>{produto.quantidade}</td>
                         <td>
-                            <Link to={"/visualizar/" + produto.id}><button
-                             type="button">Visualizar</button></Link>{" "}
-                             Editar Apagar</td>
+                                <Link to={"/visualizar/" + produto.id}><button
+                                    type="button">Visualizar</button></Link>{" "}
+                                <Link to={"/editar/" + produto.id}><button
+                                    type="button">Editar</button></Link>{" "}
+                                <Link to={"#"}><button onClick={() => apagarProduto(produto.id) }>Apagar</button></Link>
+                            </td>
                         </tr>
                     ))}
                 </tbody>
