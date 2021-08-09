@@ -28,7 +28,7 @@ export const ButtonSucess = styled.button`
     border: 1px solid #198754;
     border-radius: 4px;
     cursor: pointer;
-    font=size: 16px;
+    font-size: 16px;
     :hover{
         background-color: #198754;
         color: #fff;
@@ -57,7 +57,7 @@ export const ButtonPrimary = styled.button`
     border: 1px solid #0d6efd;
     border-radius: 4px;
     cursor: pointer;
-    font=size: 16px;
+    font-size: 16px;
     :hover{
         background-color: #0d6efd;
         color: #fff;
@@ -71,12 +71,13 @@ export const ButtonWarning = styled.button`
     border: 1px solid #ffc107;
     border-radius: 4px;
     cursor: pointer;
-    font=size: 16px;
+    font-size: 16px;
     :hover{
         background-color: #ffc107;
         color: #fff;
     }
 `;
+
 export const ButtonDanger = styled.button`
     background-color: #fff;
     color: #dc3545;
@@ -84,9 +85,55 @@ export const ButtonDanger = styled.button`
     border: 1px solid #dc3545;
     border-radius: 4px;
     cursor: pointer;
-    font=size: 16px;
+    font-size: 16px;
     :hover{
         background-color: #dc3545;
         color: #fff;
     }
+`;
+
+export const ButtonInfo = styled.button`
+    background-color: #fff;
+    color: #0dcaf0;
+    padding: 5px 8px;
+    border: 1px solid #0dcaf0;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    :hover{
+        background-color: #0dcaf0;
+        color: #fff;
+    }
+`;
+
+export const ConteudoView = styled.span`
+    margin-top: 8px;
+   font-size: 18px;
+   font-family: sans-serif;
+`;
+
+export const Form = styled.form`
+    margin: 0px auto;
+`;
+
+export const Label = styled.label`
+    width: 100%;
+    padding: 12px;
+    margin-top: 6px;
+    margin-bottom: 16px;
+`;
+
+export const Input = styled.input`
+    width: 100%;
+    padding: 12px;
+    border: 1px solida #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+`;
+
+export const Hr = styled.hr`
+    margin-bottom: 15px;
 `;

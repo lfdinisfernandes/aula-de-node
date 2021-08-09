@@ -43,7 +43,8 @@ export const Listar = () => {
     },[]);
 
     const apagarProduto = async (idProduto) => {
-        console.log(idProduto);
+        //console.log(idProduto);
+        alert("Apagar o produto: " + idProduto);
     }
 
 
@@ -89,7 +90,9 @@ export const Listar = () => {
                                 <Link to={"/editar/" + produto.id}><ButtonWarning
                                     type="button">Editar</ButtonWarning></Link>{" "}
 
-                                <Link to={"#"}><ButtonDanger onClick={() => apagarProduto(produto.id) }>Apagar</ButtonDanger></Link>
+                                <Link to={"#"}>
+                                    <ButtonDanger onClick={() => apagarProduto(produto.id) }>Apagar</ButtonDanger>
+                                    </Link>
                             </td>
                         </tr>
                     ))}
