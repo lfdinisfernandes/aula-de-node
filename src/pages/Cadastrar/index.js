@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import {Menu} from '../../componentes/Menu';
 import {Link, Redirect} from 'react-router-dom';
-import {Container, ConteudoTitulo, Titulo, BotaoAcao, ButtonInfo, Form, Label, Input, Hr, ButtonSucess} from '../../styles/custom_adm';
+import {Container, ConteudoTitulo, Titulo, BotaoAcao, ButtonInfo, Form, Label, Input, Hr, ButtonSucess, AlertDanger, AlertSuccess} from '../../styles/custom_adm';
 
 
 
@@ -23,16 +23,16 @@ export const Cadastrar = () => {
     const addProduto = async e => {
         e.preventDefault();
         
-        console.log("Quantidade: " + produto.Quantidade);
+      //console.log("Quantidade: " + produto.Quantidade);
         setStatus({
             type: 'error',
         mensagem: 'Erro: Produto não cadastrado com sucesso!'
         })
-        /*setStatus({
+      /*setStatus({
             type: 'success',
         mensagem: 'Produto cadastrado com sucesso!'
-        })
-        setStatus({
+        })*/
+      /*setStatus({
             type: 'redSuccess',
         mensagem: 'Produto cadastrado com sucesso!'
         })*/
@@ -50,8 +50,8 @@ export const Cadastrar = () => {
                 </BotaoAcao> 
             </ConteudoTitulo>
 
-            {status.type === 'error' ? <p style={{color: "#ff0000"}}>{status.mensagem}</p> : ""}
-            {status.type === 'success' ? <p style={{color: "green"}}>{status.mensagem}</p> : ""}
+            {status.type === 'error' ? <AlertDanger>{status.mensagem}</AlertDanger> : ""}
+            {status.type === 'success' ? <AlertSuccess>{status.mensagem}</AlertSuccess> : ""}
             {status.type === 'redSuccess' ? <Redirect to={{
                 pathname: "/listar",
                 state: {

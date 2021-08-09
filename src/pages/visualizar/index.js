@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import {Menu} from '../../componentes/Menu';
 import {Link} from 'react-router-dom';
-import {Container, ConteudoTitulo, Titulo, BotaoAcao, ButtonWarning, ButtonInfo, ConteudoView} from '../../styles/custom_adm'
+import {Container, ConteudoTitulo, Titulo, BotaoAcao, ButtonWarning, ButtonInfo, ConteudoView, Hr} from '../../styles/custom_adm'
 
 export const Visualizar = (props) => {
 
@@ -40,7 +40,7 @@ export const Visualizar = (props) => {
                 </BotaoAcao> 
             </ConteudoTitulo>
 
-            <hr />
+            <Hr />
             
             <ConteudoView>ID: {data.id}</ConteudoView>
             <ConteudoView>Nomme: {data.nome}</ConteudoView>
