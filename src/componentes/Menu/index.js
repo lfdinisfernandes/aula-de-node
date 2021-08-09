@@ -6,8 +6,8 @@ import {NavList} from './styles';
 export const Menu = () => {
     return(
         <NavList>
-            <NavLink to="/"><li>Dashboard</li></NavLink><br />
-            <NavLink to="/listar"><li>Listar</li></NavLink><br />
+            <NavLink to="/"><li>Dashboard</li></NavLink>
+            <NavLink to="/listar"><li>Listar</li></NavLink>
         </NavList>
     )
 }
